@@ -34,3 +34,12 @@
 .spanblock {
   display: block;
 }
+
+@media only screen and (max-width: 800px) {
+  .artist__lp {
+    padding: 1rem 0px;
+  }
+  .block {
+    padding: 1rem 0px;
+  }
+}
