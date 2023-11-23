@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.site__shell {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(52, 52, 52);
+  color: rgb(236, 227, 227);
+  overflow: scroll;
+}
+
+.artist__lp {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(52, 52, 52);
+  color: rgb(236, 227, 227);
+}
+
+.block {
+  width: 100%;
+  padding: 1rem;
+}
+.spanblock {
+  display: block;
+}
