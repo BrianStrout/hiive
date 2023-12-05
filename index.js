@@ -1,4 +1,26 @@
+let popup = document.getElementById("verification");
+window.onload = () => {
+  popup.show();
+};
+
+let pw = document.getElementById("password");
+pw.addEventListener("input", (e) => {
+  console.log("changing", e.target.value);
+  // popup.close();
+  if (e.target.value === "less lonely") {
+    // console.log("should close");
+    popup.close();
+  }
+});
+// less lonely
+// document.getElementById("enter").addEventListener("click", () => {
+//   if (pw.value === "a") {
+//     popup.close();
+//   }
+// });
 document.addEventListener("click", (e) => {
+  console.log(e.target);
+  // popup.close("a");
   if (e.target.classList.contains("btn-primary")) {
     e.preventDefault();
     const formSelector = document.getElementById("myForm");
