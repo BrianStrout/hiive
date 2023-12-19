@@ -13,11 +13,23 @@
   gap: 10%;
   justify-content: center;
   align-items: center;
+  background-color: rgb(52, 52, 52);
+  color: rgb(236, 227, 227);
   > button {
     width: 100px;
   }
 }
-
+.framephoto {
+  width: 90vw;
+  max-width: 300px;
+  height: 120vw;
+  max-height: 400px;
+  /* aspect-ratio: 1/2; */
+  background-image: url("./pictureframe.JPG");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .site__shell {
   width: 100vw;
   height: 100dvh;

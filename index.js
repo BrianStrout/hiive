@@ -7,7 +7,7 @@ let pw = document.getElementById("password");
 pw.addEventListener("input", (e) => {
   console.log("changing", e.target.value);
   // popup.close();
-  if (e.target.value === "less lonely") {
+  if (e.target.value === "sounds good") {
     // console.log("should close");
     popup.close();
   }
