@@ -1,9 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;1,100&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --white: rgb(236, 227, 227);
+  --black: rgb(52, 52, 52);
+  --headerFont: "Poppins", sans-serif;
+  --font: "Rubik", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-#verification[open] {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headerFont);
+}
+
+p {
+  font-family: var(--font);
+}
+
+.site__shell {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#artistAreaModal[open] {
   position: absolute;
   z-index: 50;
   width: 100vw;
@@ -15,57 +46,262 @@
   align-items: center;
   background-color: rgb(52, 52, 52);
   color: rgb(236, 227, 227);
-  > button {
-    width: 100px;
-  }
 }
-.framephoto {
-  width: 90vw;
-  max-width: 300px;
-  height: 120vw;
-  max-height: 400px;
-  /* aspect-ratio: 1/2; */
-  background-image: url("./pictureframe.JPG");
+
+.pad__shell {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+}
+.pad__shell .absMenu {
+  position: absolute;
+  z-index: 50;
+  top: 2rem;
+  right: 2rem;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5vh 5vw;
+  margin-bottom: 200px;
+}
+.flex2 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.head__intro {
+  position: relative;
+  height: 90vh;
+  aspect-ratio: 9/16;
+  background-image: url("./src/lonelyImages/flyer compressed.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-.site__shell {
-  width: 100vw;
-  height: 100dvh;
+.head__intro .absFollow {
+  position: absolute;
+  top: 105%;
+  right: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(52, 52, 52);
-  color: rgb(236, 227, 227);
-  overflow: scroll;
-}
-
-.artist__lp {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem;
-  background-color: rgb(52, 52, 52);
-  color: rgb(236, 227, 227);
-}
-
-.block {
-  width: 100%;
+  width: 80vw;
+  max-width: 200px;
+  height: 4rem;
   padding: 1rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 5%;
 }
-.spanblock {
-  display: block;
+.head__intro .absFollow .ig__icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--white);
+  background-image: url("./src/icons/icons8-instagram-384.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25%;
+  opacity: 0.5;
 }
 
-@media only screen and (max-width: 800px) {
-  .artist__lp {
-    padding: 1rem 0px;
+.deets {
+  position: relative;
+  padding: 10%;
+}
+.deets .abs__image {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+  background-image: url("./src/lonelyImages/gif ffor webgif.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.artist__wheel {
+  width: 100%;
+  height: 1350px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.biggie {
+  font-size: 5rem;
+  background-color: var(--white);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  color: var(--black);
+}
+
+.artist__profile {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(236, 227, 227);
+  overflow-y: scroll;
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.artist__profile.giulia {
+  transition-delay: 0.2s;
+}
+.artist__profile.sam {
+  transition-delay: 0.4s;
+}
+.artist__profile.hana {
+  transition-delay: 0s;
+}
+.artist__profile.ike {
+  transition-delay: 0.2s;
+}
+.artist__profile.ines {
+  transition-delay: 0.4s;
+}
+.artist__profile.brian {
+  transition-delay: 0.6s;
+}
+.artist__profile.mami {
+  transition-delay: 0s;
+}
+.artist__profile .picture {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: pink;
+  background-size: cover;
+  background-position: center;
+}
+.artist__profile .picture a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.artist__profile .picture a > div {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  background-image: url("./src/icons/icons8-instagram-384.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25%;
+  opacity: 0.5;
+}
+.artist__profile .picture a > div:hover {
+  opacity: 1;
+}
+.artist__profile .picture a .web__icon {
+  background-image: url("./src/icons/globe.png");
+}
+.artist__profile.paulo .picture {
+  background-image: url("./src/lonelyImages/paulo.jpg");
+}
+.artist__profile.giulia .picture {
+  background-image: url("./src/lonelyImages/gui.jpg");
+}
+.artist__profile.sam .picture {
+  background-image: url("./src/lonelyImages/same.jpg");
+}
+.artist__profile.hana .picture {
+  background-image: url("./src/lonelyImages/hana.jpeg");
+}
+.artist__profile.ike .picture {
+  background-image: url("./src/lonelyImages/ike.jpeg");
+}
+.artist__profile.ines .picture {
+  background-image: url("./src/lonelyImages/ines.jpg");
+}
+.artist__profile.brian .picture {
+  background-image: url("./src/lonelyImages/brian.png");
+}
+.artist__profile.mami .picture {
+  background-image: url("./src/lonelyImages/mami.jpg");
+}
+.artist__profile.artroom .picture {
+  background-image: url("./src/lonelyImages/arpic.png");
+}
+.artist__profile.hiive .picture {
+  background-image: url("./src/lonelyImages/hiive logo font.png");
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.bio {
+  height: auto;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 700px) {
+  .flex2 {
+    flex-direction: column;
+    padding-top: 0;
+    justify-content: flex-start;
+    margin-bottom: 100vw;
   }
-  .block {
-    padding: 1rem 0px;
+  .flex2 > div {
+    margin-top: 2vh;
+    background-position: top;
+    align-items: flex-start;
+  }
+  .flex2 .head__intro {
+    width: 100%;
+    height: unset;
+    aspect-ratio: 1/1.45;
+  }
+  .flex2 .deets {
+    padding: 0;
+    padding-bottom: 2vh;
+  }
+  .flex2 .deets .abs__image {
+    bottom: unset;
+    top: 100%;
+    width: 100vw;
+    height: 100vw;
+    left: -5vw;
+  }
+  .artist__wheel {
+    width: 100%;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin: 0 auto;
+  }
+  .artist__wheel .artist__profile {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: unset;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(236, 227, 227);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: unset;
+    padding-bottom: 2vh;
+  }
+  .artist__wheel .artist__profile .bio {
+    padding: 1vh 5vw;
   }
 }
+footer {
+  height: 10vh;
+}
+
+.fadeIO {
+  transform: translateY(150px);
+  opacity: 0;
+}/*# sourceMappingURL=index.css.map */

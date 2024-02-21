@@ -1,6 +1,8 @@
+import { callObserverFade } from "./src/modules/ioLonely";
 let popup = document.getElementById("verification");
 window.onload = () => {
-  popup.show();
+  callObserverFade();
+  console.log("should be obs");
 };
 
 let pw = document.getElementById("password");
@@ -8,10 +10,19 @@ pw.addEventListener("input", (e) => {
   console.log("changing", e.target.value);
   // popup.close();
   if (e.target.value === "sounds good") {
-    // console.log("should close");
     popup.close();
   }
 });
+
+let aa = document.getElementById("artMenu");
+let am = document.getElementById("artistAreaModal");
+aa.addEventListener("click", (e) => {
+  console.log("changing");
+  console.log(am);
+  // popup.close();
+  am.show;
+});
+
 // less lonely
 // document.getElementById("enter").addEventListener("click", () => {
 //   if (pw.value === "a") {
