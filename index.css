@@ -152,16 +152,16 @@ p {
   opacity: 1;
   transition: all 0.5s ease-out;
 }
-.artist__profile.giulia {
+.artist__profile.sam {
   transition-delay: 0.2s;
 }
-.artist__profile.sam {
+.artist__profile.ike {
   transition-delay: 0.4s;
 }
-.artist__profile.hana {
+.artist__profile.giulia {
   transition-delay: 0s;
 }
-.artist__profile.ike {
+.artist__profile.mami {
   transition-delay: 0.2s;
 }
 .artist__profile.ines {
@@ -170,8 +170,14 @@ p {
 .artist__profile.brian {
   transition-delay: 0.6s;
 }
-.artist__profile.mami {
+.artist__profile.hana {
   transition-delay: 0s;
+}
+.artist__profile.artroom {
+  transition-delay: 0.5s;
+}
+.artist__profile.hiive {
+  transition-delay: 0.7s;
 }
 .artist__profile .picture {
   position: relative;

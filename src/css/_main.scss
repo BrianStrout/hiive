@@ -156,16 +156,18 @@ p {
 
   &.paulo {
   }
-  &.giulia {
+
+  &.sam {
     transition-delay: 0.2s;
   }
-  &.sam {
+  &.ike {
     transition-delay: 0.4s;
   }
-  &.hana {
+  &.giulia {
     transition-delay: 0s;
   }
-  &.ike {
+
+  &.mami {
     transition-delay: 0.2s;
   }
   &.ines {
@@ -174,8 +176,15 @@ p {
   &.brian {
     transition-delay: 0.6s;
   }
-  &.mami {
+
+  &.hana {
     transition-delay: 0s;
+  }
+  &.artroom {
+    transition-delay: 0.5s;
+  }
+  &.hiive {
+    transition-delay: 0.7s;
   }
 
   .picture {
