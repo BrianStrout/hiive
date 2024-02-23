@@ -3,11 +3,6 @@ const observerEaseInOptions = {
   threshold: 0.2,
   // rootMargin: "0px 0px -100px 0px",
 };
-const observerEaseInOptions2 = {
-  root: null,
-  threshold: 0.3,
-  rootMargin: "0px 0px 0px 0px",
-};
 
 const observerFade = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -28,4 +23,26 @@ const callObserverFade = () => {
   });
 };
 
-export { callObserverFade };
+// const observerPlayer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.play();
+//       } else {
+//         entry.target.pause();
+//       }
+//     });
+//   },
+//   {
+//     threshold: 0.8,
+//   }
+// );
+
+// const callObserverPlayer = () => {
+//   let videos = document.querySelectorAll(".iovideo");
+//   videos.forEach((video) => {
+//     observerPlayer.observe(video);
+//   });
+// };
+
+export { callObserverFade, callObserverPlayer };
