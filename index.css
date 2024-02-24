@@ -221,25 +221,25 @@ p {
   background-image: url("./src/lonelyImages/same.jpg");
 }
 .artist__profile.hana .picture {
-  background-image: url("./src/lonelyImages/hana.jpeg");
+  background-image: url("./src/lonelyImages/hana.jpg");
 }
 .artist__profile.ike .picture {
-  background-image: url("./src/lonelyImages/ike.jpeg");
+  background-image: url("./src/lonelyImages/ike.jpg");
 }
 .artist__profile.ines .picture {
   background-image: url("./src/lonelyImages/ines.jpg");
 }
 .artist__profile.brian .picture {
-  background-image: url("./src/lonelyImages/brian.png");
+  background-image: url("./src/lonelyImages/brian.jpg");
 }
 .artist__profile.mami .picture {
   background-image: url("./src/lonelyImages/mami.jpg");
 }
 .artist__profile.artroom .picture {
-  background-image: url("./src/lonelyImages/arpic.png");
+  background-image: url("./src/lonelyImages/arpic.jpg");
 }
 .artist__profile.hiive .picture {
-  background-image: url("./src/lonelyImages/hiive logo font.png");
+  background-image: url("./src/lonelyImages/hiive logo font.jpg");
 }
 
 .name {
@@ -301,6 +301,7 @@ p {
     align-items: center;
     overflow-y: unset;
     padding-bottom: 2vh;
+    transition-delay: 0s !important;
   }
   .artist__wheel .artist__profile .bio {
     padding: 1vh 5vw;
