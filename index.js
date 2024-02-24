@@ -1,27 +1,28 @@
-import { callObserverFade } from "./src/modules/ioLonely";
+import { callObserverFade, callObserverPlayer } from "./src/modules/ioLonely";
 let popup = document.getElementById("verification");
 window.onload = () => {
   callObserverFade();
+  callObserverPlayer();
   console.log("should be obs");
 };
 
-let pw = document.getElementById("password");
-pw.addEventListener("input", (e) => {
-  console.log("changing", e.target.value);
-  // popup.close();
-  if (e.target.value === "sounds good") {
-    popup.close();
-  }
-});
+// let pw = document.getElementById("password");
+// pw.addEventListener("input", (e) => {
+//   console.log("changing", e.target.value);
+//   // popup.close();
+//   if (e.target.value === "sounds good") {
+//     popup.close();
+//   }
+// });
 
-let aa = document.getElementById("artMenu");
-let am = document.getElementById("artistAreaModal");
-aa.addEventListener("click", (e) => {
-  console.log("changing");
-  console.log(am);
-  // popup.close();
-  am.show;
-});
+// let aa = document.getElementById("artMenu");
+// let am = document.getElementById("artistAreaModal");
+// aa.addEventListener("click", (e) => {
+//   console.log("changing");
+//   console.log(am);
+//   // popup.close();
+//   am.show;
+// });
 
 // less lonely
 // document.getElementById("enter").addEventListener("click", () => {

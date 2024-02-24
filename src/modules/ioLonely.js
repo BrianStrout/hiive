@@ -23,26 +23,26 @@ const callObserverFade = () => {
   });
 };
 
-// const observerPlayer = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         entry.target.play();
-//       } else {
-//         entry.target.pause();
-//       }
-//     });
-//   },
-//   {
-//     threshold: 0.8,
-//   }
-// );
+const observerPlayer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.pause();
+      }
+    });
+  },
+  {
+    threshold: 0.8,
+  }
+);
 
-// const callObserverPlayer = () => {
-//   let videos = document.querySelectorAll(".iovideo");
-//   videos.forEach((video) => {
-//     observerPlayer.observe(video);
-//   });
-// };
+const callObserverPlayer = () => {
+  let videos = document.querySelectorAll(".iovideo");
+  videos.forEach((video) => {
+    observerPlayer.observe(video);
+  });
+};
 
 export { callObserverFade, callObserverPlayer };

@@ -122,6 +122,10 @@ p {
   width: 400px;
   height: 400px;
 }
+.deets .abs__image video {
+  width: 400px;
+  height: 400px;
+}
 
 .artist__wheel {
   width: 100%;
